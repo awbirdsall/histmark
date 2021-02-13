@@ -61,7 +61,7 @@ def directions_route_duration(route_coords):
 
     route = ors_clnt.directions(**request)
     # duration in minutes
-    duration = route['features'][0]['properties']['summary'][0]['duration'] / 60
+    duration = route['features'][0]['properties']['summary']['duration'] / 60
 
     return route, duration
 
